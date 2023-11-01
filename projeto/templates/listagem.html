@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listagem de Registro</title>
+<link rel="styleheet" href="{{url_for('static', filename='estilo.css')}}">
+
+</head>
+<body>
+<h1>Listagem de Registro</h1>
+<table>
+<tr><th>ID</th><th>Nome</th><th>Email</th><th>Opções</th></tr>
+{% for registro in registros %}
+<tr>
+<td>{{ registro[0] }}</td><td>[{ registro[1] }]</td>    
+<td>{{ registro[2] }}</td>
+<td></td>
+</tr>
+{% endfor %}
+</table>
+<br>
+<a href="/adicionar">Adicionar Novo Registro</a>
+
+
+
+</body>
+</html>
